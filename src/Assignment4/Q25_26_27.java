@@ -5,14 +5,13 @@ import java.util.Scanner;
 //Using Non-statics Methods
 public class Q25_26_27 {
 
-    public void student(){
+    public void student(Scanner input){
         //25. Write a program that prompts the user to enter the number
         // of students and each student’s name and score.
         // Finally display the student with the highest score.
 
         System.out.println("Question 25. Display the student with the highest score");
 
-        Scanner input = new Scanner(System.in);
         int highest_score = 0;
         String highest_scorer_name = "";
 
@@ -40,9 +39,8 @@ public class Q25_26_27 {
         System.out.println("======================");
     }
 
-    public void reverse(){
+    public void reverse(Scanner input){
        //26. Write a Program to reverse the given number. //123 => 321
-        Scanner input = new Scanner(System.in);
         System.out.println("Question 26. Reverse the given number");
         System.out.println("Enter a number to reverse: ");
         int num = input.nextInt();
@@ -66,10 +64,10 @@ public class Q25_26_27 {
         }
     }
 
-    public void sumProductDigits(){
+    public void sumProductDigits(Scanner input){
         //sum each digit of given number as well as product.
         System.out.println("Question 27. Sum and Product of each digit of given number");
-        Scanner input = new Scanner(System.in);
+
         System.out.println("Enter a number:");
         int num = input.nextInt();
         int sum = 0;
@@ -100,19 +98,21 @@ public class Q25_26_27 {
     public static void main(String[] args) {
         //Calling Highest score and Student
 
+        Scanner input = new Scanner(System.in);
+
         Q25_26_27 ob25 = new Q25_26_27();
-        ob25.student();
+        ob25.student(input);
         System.out.println();
 
 
         //calling reversed number
         Q25_26_27 ob26 = new Q25_26_27();
-        ob26.reverse();
+        ob26.reverse(input);
         System.out.println();
 
         //calling Sum and product of each digit
         Q25_26_27 ob27 = new Q25_26_27();
-        ob27.sumProductDigits();
+        ob27.sumProductDigits(input);
         System.out.println();
     }
 }
