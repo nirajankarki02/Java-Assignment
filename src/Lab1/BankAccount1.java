@@ -143,10 +143,10 @@ public class BankAccount1 {
     //Saving Account Balance
     public static double displayAccountBalance(String customer, int pin) {
         double balanceSaving = 0;
-        if (customer == "Sam Saran"  && pin == 123) {
+        if (customer.equals("Sam Saran") && pin == 123) {
             balanceSaving = 10009000.09;
         }
-        else if (customer == "Ram Hari" && pin == 321) {
+        else if (customer.equals("Ram Hari") && pin == 321) {
             balanceSaving = 50000.85;
         }
 
@@ -173,7 +173,7 @@ public class BankAccount1 {
     //deposit in saving
     public static double deposit(double depositAmount, double balanceSaving){
        double interest = 0.03;
-       double totalBal = interest * balanceSaving + depositAmount;
+       double totalBal = (interest * balanceSaving) + depositAmount;
         System.out.println("Your updated saving account Balance is: "+totalBal);
         return totalBal;
     }
@@ -183,7 +183,7 @@ public class BankAccount1 {
     //Checking Account Number
     public BankAccount1(String customer){
         int accountNo = 0;
-        if (customer.equals("Rajesh Hamal")){
+        if (customer.equals("Sam Saran")){
             accountNo = 11001;
             System.out.println("Your account number is "+accountNo);
         }
@@ -195,12 +195,12 @@ public class BankAccount1 {
     //Saving Account Number
     public BankAccount1(String customer, int pin){
         int accountNo = 0;
-        if (customer == "Sam Saran" && pin == 123)
+        if (customer.equals("Sam Saran" ) && pin == 123)
         {
             accountNo = 10011;
             System.out.println("Your account number is "+accountNo);
         }
-        if (customer == "Ram Hari" && pin == 321)
+        if (customer.equals("Ram Hari") && pin == 321)
         {
             accountNo = 20022;
             System.out.println("Your account number is "+accountNo);
