@@ -108,9 +108,9 @@ public class StudentAddressQ44 {
         private String name;
         private String address;
 
-        Student(String name, String add) {
+        Student(String name, String address) {
             this.name = name;
-            this.address = add;
+            this.address = address;
         }
 
         public String getName() {
